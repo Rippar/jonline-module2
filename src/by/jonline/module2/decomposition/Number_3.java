@@ -3,7 +3,7 @@ package by.jonline.module2.decomposition;
 import java.util.Locale;
 import java.util.Scanner;
 
-/*Вычислить площадь правильного шестиугольника со стороной а, используя метод вычисления площади треугольника*/
+/*Р’С‹С‡РёСЃР»РёС‚СЊ РїР»РѕС‰Р°РґСЊ РїСЂР°РІРёР»СЊРЅРѕРіРѕ С€РµСЃС‚РёСѓРіРѕР»СЊРЅРёРєР° СЃРѕ СЃС‚РѕСЂРѕРЅРѕР№ Р°, РёСЃРїРѕР»СЊР·СѓСЏ РјРµС‚РѕРґ РІС‹С‡РёСЃР»РµРЅРёСЏ РїР»РѕС‰Р°РґРё С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°*/
 
 public class Number_3 {
 	public static void main(String[] args) {
@@ -14,10 +14,10 @@ public class Number_3 {
 
 			double s;
 			s = 6 * triangleSquare(a);
-			System.out.printf("Площадь правильного шестиугольника со стороной %.3f = %4.3f", a, s);
+			System.out.printf("РџР»РѕС‰Р°РґСЊ РїСЂР°РІРёР»СЊРЅРѕРіРѕ С€РµСЃС‚РёСѓРіРѕР»СЊРЅРёРєР° СЃРѕ СЃС‚РѕСЂРѕРЅРѕР№ %.3f = %4.3f", a, s);
 
 		} else {
-			System.out.println("Сторона шестиугольника должна быть больше 0!");
+			System.out.println("РЎС‚РѕСЂРѕРЅР° С€РµСЃС‚РёСѓРіРѕР»СЊРЅРёРєР° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 0!");
 		}
 
 	}
@@ -29,15 +29,17 @@ public class Number_3 {
 	}
 
 	public static double enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
-		sc.useLocale(Locale.ENGLISH); // используется, чтобы вводить в консоль вещественные числа через точку (по
-										// умолчанию ввод через запятую)
+		
+		// РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ, С‡С‚РѕР±С‹ РІРІРѕРґРёС‚СЊ РІ РєРѕРЅСЃРѕР»СЊ РІРµС‰РµСЃС‚РІРµРЅРЅС‹Рµ С‡РёСЃР»Р° С‡РµСЂРµР· С‚РѕС‡РєСѓ (РїРѕ
+		// СѓРјРѕР»С‡Р°РЅРёСЋ РІРІРѕРґ С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ)
+		sc.useLocale(Locale.ENGLISH);
 
-		System.out.println("Введите положительное число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ: ");
 		while (!sc.hasNextDouble()) {
 			sc.next();
-			System.out.println("Нужно ввести положительное число!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ!: ");
 
 		}
 		return sc.nextDouble();

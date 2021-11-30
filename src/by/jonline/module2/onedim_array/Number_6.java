@@ -2,8 +2,8 @@ package by.jonline.module2.onedim_array;
 
 import java.util.Scanner;
 
-/*Задана последовательность N вещественных(?) чисел. Вычислить сумму чисел, порядковые номера которых являются простыми числами*/
-/*Возможно, ошибка в условии, так как вещественные числа не могут быть простыми*/
+/*Р—Р°РґР°РЅР° РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ N РІРµС‰РµСЃС‚РІРµРЅРЅС‹С… С‡РёСЃРµР». Р’С‹С‡РёСЃР»РёС‚СЊ СЃСѓРјРјСѓ С‡РёСЃРµР», РїРѕСЂСЏРґРєРѕРІС‹Рµ РЅРѕРјРµСЂР° РєРѕС‚РѕСЂС‹С… СЏРІР»СЏСЋС‚СЃСЏ РїСЂРѕСЃС‚С‹РјРё С‡РёСЃР»Р°РјРё*/
+
 
 public class Number_6 {
 	public static void main(String[] args) {
@@ -19,26 +19,28 @@ public class Number_6 {
 
 			printArray(a);
 
-			for (int i = 2; i < a.length; i++) { // 0 и 1 не являются простыми числами
+			for (int i = 2; i < a.length; i++) { // 0 Рё 1 РЅРµ СЏРІР»СЏСЋС‚СЃСЏ РїСЂРѕСЃС‚С‹РјРё С‡РёСЃР»Р°РјРё
 				if (isSimple(i)) {
 					sumOfSimple += a[i];
 				}
 			}
+			
+			System.out.println(sumOfSimple);
 
 		} else if (n > 100) {
 
-			System.out.println("Введенный размер массива слишком велик!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° СЃР»РёС€РєРѕРј РІРµР»РёРє!");
 
 		} else {
 
-			System.out.println("Размер массива для данной задачи должен быть больше 1!");
+			System.out.println("Р Р°Р·РјРµСЂ РјР°СЃСЃРёРІР° РґР»СЏ РґР°РЅРЅРѕР№ Р·Р°РґР°С‡Рё РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 1!");
 		}
 	}
 
-	public static boolean isSimple(int a) {
-		for (int i = 2; i < a; i++) {
+	public static boolean isSimple(int i) {
+		for (int j = 2; j < i; j++) {
 
-			if (a % i == 0) {
+			if (i % j == 0) {
 				return false;
 			}
 		}
@@ -53,7 +55,7 @@ public class Number_6 {
 
 	public static void printArray(int[] a) {
 
-		System.out.println("Исходный массив:");
+		System.out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ:");
 
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(a[i] + "; ");
@@ -62,13 +64,13 @@ public class Number_6 {
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите целое положительное число, большее 1: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ, Р±РѕР»СЊС€РµРµ 1: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести целое положительное число, большее 1!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ, Р±РѕР»СЊС€РµРµ 1!: ");
 
 		}
 		return sc.nextInt();

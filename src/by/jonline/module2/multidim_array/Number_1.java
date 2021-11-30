@@ -2,7 +2,7 @@ package by.jonline.module2.multidim_array;
 
 import java.util.Scanner;
 
-/*Дана матрица. Вывести на экран все нечетные столбцы, у которых первый элемент больше последнего*/
+/*Р”Р°РЅР° РјР°С‚СЂРёС†Р°. Р’С‹РІРµСЃС‚Рё РЅР° СЌРєСЂР°РЅ РІСЃРµ РЅРµС‡РµС‚РЅС‹Рµ СЃС‚РѕР»Р±С†С‹, Сѓ РєРѕС‚РѕСЂС‹С… РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ Р±РѕР»СЊС€Рµ РїРѕСЃР»РµРґРЅРµРіРѕ*/
 
 public class Number_1 {
 	public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class Number_1 {
 		int n = enterFromConsole();
 		int k = enterFromConsole();
 
-		if (n > 1 && k > 1 && n <= 100 && k <= 100) { // макс. размер задан для удобства представления
+		if (n > 1 && k > 1 && n <= 100 && k <= 100) { // РјР°РєСЃ. СЂР°Р·РјРµСЂ Р·Р°РґР°РЅ РґР»СЏ СѓРґРѕР±СЃС‚РІР° РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ
 
 			double[][] a = new double[n][k];
 
@@ -34,10 +34,10 @@ public class Number_1 {
 			}
 
 		} else if (n > 100 || k > 100) {
-			System.out.println("Введенные размеры матрицы слишком велики!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Рµ СЂР°Р·РјРµСЂС‹ РјР°С‚СЂРёС†С‹ СЃР»РёС€РєРѕРј РІРµР»РёРєРё!");
 
 		} else {
-			System.out.println("Размер матрицы для данной задачи должен быть больше 1 х 1 !");
+			System.out.println("Р Р°Р·РјРµСЂ РјР°С‚СЂРёС†С‹ РґР»СЏ РґР°РЅРЅРѕР№ Р·Р°РґР°С‡Рё РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 1 С… 1 !");
 
 		}
 
@@ -52,7 +52,7 @@ public class Number_1 {
 	}
 
 	public static void printArray(double[][] a) {
-		System.out.println("Исходная матрица:");
+		System.out.println("РСЃС…РѕРґРЅР°СЏ РјР°С‚СЂРёС†Р°:");
 
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a[i].length; j++) {
@@ -65,13 +65,13 @@ public class Number_1 {
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите положительное число, большее 1: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ, Р±РѕР»СЊС€РµРµ 1: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести положительное число, большее 1!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ, Р±РѕР»СЊС€РµРµ 1!: ");
 
 		}
 		return sc.nextInt();

@@ -2,15 +2,15 @@ package by.jonline.module2.multidim_array;
 
 import java.util.Scanner;
 
-/*Найдите наибольший элемент матрицы и замените все нечетные элементы на него*/
+/*РќР°Р№РґРёС‚Рµ РЅР°РёР±РѕР»СЊС€РёР№ СЌР»РµРјРµРЅС‚ РјР°С‚СЂРёС†С‹ Рё Р·Р°РјРµРЅРёС‚Рµ РІСЃРµ РЅРµС‡РµС‚РЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ РЅР° РЅРµРіРѕ*/
 
 public class Number_15 {
 	public static void main(String[] args) {
 
-		int n = enterFromConsole(); // длина матрицы
-		int w = enterFromConsole(); // ширина матрицы
+		int n = enterFromConsole(); // РґР»РёРЅР° РјР°С‚СЂРёС†С‹
+		int w = enterFromConsole(); // С€РёСЂРёРЅР° РјР°С‚СЂРёС†С‹
 
-		if (n > 1 && w > 1 && n <= 100 && w <= 100) { // макс. размер задан для удобства представления
+		if (n > 1 && w > 1 && n <= 100 && w <= 100) { // РјР°РєСЃ. СЂР°Р·РјРµСЂ Р·Р°РґР°РЅ РґР»СЏ СѓРґРѕР±СЃС‚РІР° РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ
 
 			int[][] a = new int[n][w];
 
@@ -19,7 +19,7 @@ public class Number_15 {
 
 			int maxValue = findMax(a);
 
-			System.out.println("Наибольший элемент исходной матрицы: " + maxValue + "\n");
+			System.out.println("РќР°РёР±РѕР»СЊС€РёР№ СЌР»РµРјРµРЅС‚ РёСЃС…РѕРґРЅРѕР№ РјР°С‚СЂРёС†С‹:  " + maxValue + "\n");
 
 			for (int i = 0; i < a.length; i++) {
 				for (int j = 0; j < a[i].length; j++) {
@@ -33,10 +33,10 @@ public class Number_15 {
 			printArray(a);
 
 		} else if (n > 100 || w > 100) {
-			System.out.println("Введенные размеры матрицы слишком велики!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Рµ СЂР°Р·РјРµСЂС‹ РјР°С‚СЂРёС†С‹ СЃР»РёС€РєРѕРј РІРµР»РёРєРё!");
 
 		} else {
-			System.out.println("Размер матрицы для данной задачи должен быть больше 1 х 1!");
+			System.out.println("Р Р°Р·РјРµСЂ РјР°С‚СЂРёС†С‹ РґР»СЏ РґР°РЅРЅРѕР№ Р·Р°РґР°С‡Рё РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 1 С… 1!");
 		}
 	}
 
@@ -78,13 +78,13 @@ public class Number_15 {
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите целое положительное число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести целое положительное число!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ!: ");
 
 		}
 		return sc.nextInt();

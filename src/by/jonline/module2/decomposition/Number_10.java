@@ -1,6 +1,6 @@
 package by.jonline.module2.decomposition;
 
-/*Дано натуральное число N. Написать метод (методы) для формирования массива, элементами которого являются цифры числа N.*/
+/*Р”Р°РЅРѕ РЅР°С‚СѓСЂР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ N. РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ (РјРµС‚РѕРґС‹) РґР»СЏ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РјР°СЃСЃРёРІР°, СЌР»РµРјРµРЅС‚Р°РјРё РєРѕС‚РѕСЂРѕРіРѕ СЏРІР»СЏСЋС‚СЃСЏ С†РёС„СЂС‹ С‡РёСЃР»Р° N.*/
 
 import java.util.Scanner;
 
@@ -16,7 +16,7 @@ public class Number_10 {
 			printArray(a);
 
 		} else {
-			System.out.println("Нужно ввести целое положительное число!");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ!");
 		}
 	}
 
@@ -52,13 +52,13 @@ public class Number_10 {
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите целое положительное число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести целое положительное число!");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ!");
 		}
 
 		return sc.nextInt();

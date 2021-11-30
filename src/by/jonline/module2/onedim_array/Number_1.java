@@ -2,14 +2,14 @@ package by.jonline.module2.onedim_array;
 
 import java.util.Scanner;
 
-/*В массив A[N] занесены натуральные числа. Найти сумму тех элементов, которые кратны данному К*/
+/*Р’ РјР°СЃСЃРёРІ A[N] Р·Р°РЅРµСЃРµРЅС‹ РЅР°С‚СѓСЂР°Р»СЊРЅС‹Рµ С‡РёСЃР»Р°. РќР°Р№С‚Рё СЃСѓРјРјСѓ С‚РµС… СЌР»РµРјРµРЅС‚РѕРІ, РєРѕС‚РѕСЂС‹Рµ РєСЂР°С‚РЅС‹ РґР°РЅРЅРѕРјСѓ Рљ*/
 
 public class Number_1 {
 	public static void main(String[] args) {
 	
 		int n = enterFromConsole();
 		
-		if (n > 0 && n <= 100) { // макс. размер задан для удобства представления
+		if (n > 0 && n <= 100) { // РјР°РєСЃ. СЂР°Р·РјРµСЂ Р·Р°РґР°РЅ РґР»СЏ СѓРґРѕР±СЃС‚РІР° РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ
 			
 			int[] a = new int[n];
 		
@@ -29,19 +29,19 @@ public class Number_1 {
 					}
 				}
 				
-			    System.out.println("Сумма элементов, кратных "+k+": "+sum);
+			    System.out.println("РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ, РєСЂР°С‚РЅС‹С…  "+k+": "+sum);
 			    
 			} else {
-				System.out.println("Делить на 0 нельзя!");
+				System.out.println("Р”РµР»РёС‚СЊ РЅР° 0 РЅРµР»СЊР·СЏ!");
 			}
 
 		    
 		} else if (n > 100) {
 			
-			System.out.println("Введенный размер массива слишком велик!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° СЃР»РёС€РєРѕРј РІРµР»РёРє!");
 
 		} else {
-			System.out.println("Размер массива для данной задачи должен быть больше 1!");
+			System.out.println("Р Р°Р·РјРµСЂ РјР°СЃСЃРёРІР° РґР»СЏ РґР°РЅРЅРѕР№ Р·Р°РґР°С‡Рё РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 1!");
 
 		}
 	}
@@ -54,7 +54,7 @@ public class Number_1 {
 	
 	public static void printArray(int[] a) {
 		
-		System.out.println("Исходный массив:");
+		System.out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ:");
 		
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(a[i] + "; ");
@@ -63,13 +63,13 @@ public class Number_1 {
 	}
 	
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Введите размер массива, затем число К: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°, Р·Р°С‚РµРј С‡РёСЃР»Рѕ Рљ: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести целое число!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С†РµР»РѕРµ С‡РёСЃР»Рѕ!: ");
 
 		}
 		return sc.nextInt();

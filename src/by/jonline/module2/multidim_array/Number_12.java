@@ -2,40 +2,40 @@ package by.jonline.module2.multidim_array;
 
 import java.util.Scanner;
 
-/*Отсортировать строки матрицы по возрастанию и убыванию значений элементов*/
+/*РћС‚СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ СЃС‚СЂРѕРєРё РјР°С‚СЂРёС†С‹ РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ Рё СѓР±С‹РІР°РЅРёСЋ Р·РЅР°С‡РµРЅРёР№ СЌР»РµРјРµРЅС‚РѕРІ*/
 
 public class Number_12 {
 	public static void main(String[] args) {
 
-		int n = enterFromConsole(); // длина матрицы
-		int w = enterFromConsole(); // ширина матрицы
+		int n = enterFromConsole(); // РґР»РёРЅР° РјР°С‚СЂРёС†С‹
+		int w = enterFromConsole(); // С€РёСЂРёРЅР° РјР°С‚СЂРёС†С‹
 
-		if (n > 1 && w > 1 && n <= 100 && w <= 100) { // макс. размер задан для удобства представления
+		if (n > 1 && w > 1 && n <= 100 && w <= 100) { // РјР°РєСЃ. СЂР°Р·РјРµСЂ Р·Р°РґР°РЅ РґР»СЏ СѓРґРѕР±СЃС‚РІР° РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ
 
 			double[][] a = new double[n][w];
 
 			fillArray(a);
 
-			System.out.println("Исходный массив:");
+			System.out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ:");
 			printArray(a);
 
 			sortByLineAscending(a);
-			System.out.println("Отсортированный массив в порядке возрастания по строкам:");
+			System.out.println("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ РІ РїРѕСЂСЏРґРєРµ РІРѕР·СЂР°СЃС‚Р°РЅРёСЏ РїРѕ СЃС‚СЂРѕРєР°Рј:");
 			printArray(a);
 
 			sortByLineDecreasing(a);
-			System.out.println("Отсортированный массив в порядке убывания по строкам:");
+			System.out.println("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ РІ РїРѕСЂСЏРґРєРµ СѓР±С‹РІР°РЅРёСЏ РїРѕ СЃС‚СЂРѕРєР°Рј:");
 			printArray(a);
 
 		} else if (n > 100 || w > 100) {
-			System.out.println("Введенные размеры матрицы слишком велики!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Рµ СЂР°Р·РјРµСЂС‹ РјР°С‚СЂРёС†С‹ СЃР»РёС€РєРѕРј РІРµР»РёРєРё!");
 
 		} else {
-			System.out.println("Размер матрицы для данной задачи должен быть больше 1 х 1!");
+			System.out.println("Р Р°Р·РјРµСЂ РјР°С‚СЂРёС†С‹ РґР»СЏ РґР°РЅРЅРѕР№ Р·Р°РґР°С‡Рё РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 1 С… 1!");
 		}
 	}
 
-	public static void sortByLineAscending(double[][] a) { // сортировка в порядке возрастания по строкам
+	public static void sortByLineAscending(double[][] a) { 
 		boolean isSorted = false;
 
 		for (int i = 0; i < a.length; i++) {
@@ -60,7 +60,7 @@ public class Number_12 {
 		}
 	}
 
-	public static void sortByLineDecreasing(double[][] a) { // сортировка в порядке убывания по строкам
+	public static void sortByLineDecreasing(double[][] a) { 
 		boolean isSorted;
 
 		for (int i = 0; i < a.length; i++) {
@@ -109,13 +109,13 @@ public class Number_12 {
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите целое положительное число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести целое положительное число!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ!: ");
 
 		}
 		return sc.nextInt();

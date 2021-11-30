@@ -2,16 +2,16 @@ package by.jonline.module2.multidim_array;
 
 import java.util.Scanner;
 
-/*Сформировать квадратную матрицу порядка n по заданному образцу (n - четное):
-  
-	1  2   3  .. n
-	n n-1 n-2 .. 1
-	1  2   3  .. n
-	n n-1 n-2 .. 1
-	.  .   . .   .
-	.  .   .   . . 
-	n n-1 n-2 .. 1 
-	
+/*РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РєРІР°РґСЂР°С‚РЅСѓСЋ РјР°С‚СЂРёС†Сѓ РїРѕСЂСЏРґРєР° n РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РѕР±СЂР°Р·С†Сѓ (n - С‡РµС‚РЅРѕРµ):
+
+1  2   3  .. n
+n n-1 n-2 .. 1
+1  2   3  .. n
+n n-1 n-2 .. 1
+.  .   . .   .
+.  .   .   . . 
+n n-1 n-2 .. 1 
+
 */
 
 public class Number_4 {
@@ -38,10 +38,10 @@ public class Number_4 {
 			printArray(a);
 
 		} else if (n > 100) {
-			System.out.println("Введенный размер матрицы слишком велик!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РјР°С‚СЂРёС†С‹ СЃР»РёС€РєРѕРј РІРµР»РёРє!");
 
 		} else {
-			System.out.println("Размер матрицы должен быть представлен четным положительным числом!");
+			System.out.println("Р Р°Р·РјРµСЂ РјР°С‚СЂРёС†С‹ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїСЂРµРґСЃС‚Р°РІР»РµРЅ С‡РµС‚РЅС‹Рј РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј С‡РёСЃР»РѕРј!");
 		}
 	}
 
@@ -58,13 +58,13 @@ public class Number_4 {
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите четное число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‡РµС‚РЅРѕРµ С‡РёСЃР»Рѕ: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести четное число!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С‡РµС‚РЅРѕРµ С‡РёСЃР»Рѕ!: ");
 
 		}
 		return sc.nextInt();

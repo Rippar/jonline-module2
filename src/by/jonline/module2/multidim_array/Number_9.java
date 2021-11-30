@@ -2,13 +2,13 @@ package by.jonline.module2.multidim_array;
 
 import java.util.Scanner;
 
-/*Задана матрица неотрицательных чисел. Посчитать сумму элементов в каждом столбце. Определить, какой столбец содержит максимальную сумму.*/
+/*Р—Р°РґР°РЅР° РјР°С‚СЂРёС†Р° РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… С‡РёСЃРµР». РџРѕСЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ СЌР»РµРјРµРЅС‚РѕРІ РІ РєР°Р¶РґРѕРј СЃС‚РѕР»Р±С†Рµ. РћРїСЂРµРґРµР»РёС‚СЊ, РєР°РєРѕР№ СЃС‚РѕР»Р±РµС† СЃРѕРґРµСЂР¶РёС‚ РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋ СЃСѓРјРјСѓ.*/
 
 public class Number_9 {
 	public static void main(String[] args) {
 		
-		int n = enterFromConsole(); // длина матрицы
-		int w = enterFromConsole(); // ширина матрицы
+		int n = enterFromConsole(); // РґР»РёРЅР° РјР°С‚СЂРёС†С‹
+		int w = enterFromConsole(); // С€РёСЂРёРЅР° РјР°С‚СЂРёС†С‹
 
 		if (n > 1 && w > 1 && n <= 100 && w <= 100) {
 
@@ -36,13 +36,13 @@ public class Number_9 {
 				}
 			}
 			
-			System.out.printf(column+"й столбец матрицы содержит максимальную сумму: %4.3f", maxSum);
+			System.out.printf(column+"Р№ СЃС‚РѕР»Р±РµС† РјР°С‚СЂРёС†С‹ СЃРѕРґРµСЂР¶РёС‚ РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋ СЃСѓРјРјСѓ: %4.3f", maxSum);
 
 		} else if (n > 100 || w > 100) {
-			System.out.println("Введенные размеры матрицы слишком велики!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Рµ СЂР°Р·РјРµСЂС‹ РјР°С‚СЂРёС†С‹ СЃР»РёС€РєРѕРј РІРµР»РёРєРё!");
 
 		} else {
-			System.out.println("Размер матрицы для данной задачи должен быть больше 1 х 1!");
+			System.out.println("\"Р Р°Р·РјРµСЂ РјР°С‚СЂРёС†С‹ РґР»СЏ РґР°РЅРЅРѕР№ Р·Р°РґР°С‡Рё РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 1 С… 1!");
 		}
 
 	}
@@ -71,13 +71,13 @@ public class Number_9 {
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите положительное целое число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С†РµР»РѕРµ С‡РёСЃР»Рѕ: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести положительное целое число!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С†РµР»РѕРµ С‡РёСЃР»Рѕ!: ");
 
 		}
 		return sc.nextInt();

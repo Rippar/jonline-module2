@@ -2,14 +2,14 @@ package by.jonline.module2.multidim_array;
 
 import java.util.Scanner;
 
-/*Найти положительные элементы главной диагонали квадратной матрицы*/
+/*РќР°Р№С‚Рё РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ РіР»Р°РІРЅРѕР№ РґРёР°РіРѕРЅР°Р»Рё РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹*/
 
 public class Number_10 {
 	public static void main(String[] args) {
 
 		int n = enterFromConsole();
 
-		if (n > 1 && n <= 100) { // макс. размер задан для удобства представления
+		if (n > 1 && n <= 100) { // РјР°РєСЃ. СЂР°Р·РјРµСЂ Р·Р°РґР°РЅ РґР»СЏ СѓРґРѕР±СЃС‚РІР° РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ
 
 			double[][] a = new double[n][n];
 
@@ -27,10 +27,10 @@ public class Number_10 {
 			}
 
 		} else if (n > 100) {
-			System.out.println("Введенный размер матрицы слишком велик!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РјР°С‚СЂРёС†С‹ СЃР»РёС€РєРѕРј РІРµР»РёРє!");
 
 		} else {
-			System.out.println("Размер матрицы для данной задачи должен быть больше 1 х 1!");
+			System.out.println("Р Р°Р·РјРµСЂ РјР°С‚СЂРёС†С‹ РґР»СЏ РґР°РЅРЅРѕР№ Р·Р°РґР°С‡Рё РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 1 С… 1!");
 		}
 
 	}
@@ -59,13 +59,13 @@ public class Number_10 {
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите целое положительное число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести целое положительное число!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ!: ");
 
 		}
 		return sc.nextInt();

@@ -1,33 +1,33 @@
 package by.jonline.module2.onedim_array_sorting;
 
-/*Даны дроби p1/q1, p2/q2,... pn/qn (pi, qi - натуральные). Составить программу, которая приводит
-эти дроби к общему знаменателю и упорядочивает их в порядке возрастания.*/
+/*Р”Р°РЅС‹ РґСЂРѕР±Рё p1/q1, p2/q2,... pn/qn (pi, qi - РЅР°С‚СѓСЂР°Р»СЊРЅС‹Рµ). РЎРѕСЃС‚Р°РІРёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ РїСЂРёРІРѕРґРёС‚
+СЌС‚Рё РґСЂРѕР±Рё Рє РѕР±С‰РµРјСѓ Р·РЅР°РјРµРЅР°С‚РµР»СЋ Рё СѓРїРѕСЂСЏРґРѕС‡РёРІР°РµС‚ РёС… РІ РїРѕСЂСЏРґРєРµ РІРѕР·СЂР°СЃС‚Р°РЅРёСЏ.*/
 
 public class Number_8 {
 	public static void main(String[] args) {
 
-		int[] p = { 5, 2, 4, 3, 7, 1 }; // массив числителей
-		int[] q = { 6, 3, 9, 8, 8, 3 }; // массив знаменателей
+		int[] p = { 5, 2, 4, 3, 7, 1 }; // РјР°СЃСЃРёРІ С‡РёСЃР»РёС‚РµР»РµР№
+		int[] q = { 6, 3, 9, 8, 8, 3 }; // РјР°СЃСЃРёРІ Р·РЅР°РјРµРЅР°С‚РµР»РµР№
 
 		printArray(p);
 		printArray(q);
 
 		int comDen = lcm(q);
 
-		System.out.println("Общий знаменатель: " + comDen);
+		System.out.println("РћР±С‰РёР№ Р·РЅР°РјРµРЅР°С‚РµР»СЊ: " + comDen);
 
-		for (int i = 0; i < p.length; i++) { // приведение дробей к общему знаменателю
+		for (int i = 0; i < p.length; i++) { // РїСЂРёРІРµРґРµРЅРёРµ РґСЂРѕР±РµР№ Рє РѕР±С‰РµРјСѓ Р·РЅР°РјРµРЅР°С‚РµР»СЋ
 			p[i] = p[i] * comDen / q[i];
 			q[i] = q[i] * comDen / q[i];
 		}
 
-		System.out.println("\nПриведение дробей к общему знаменателю: ");
+		System.out.println("\\nРџСЂРёРІРµРґРµРЅРёРµ РґСЂРѕР±РµР№ Рє РѕР±С‰РµРјСѓ Р·РЅР°РјРµРЅР°С‚РµР»СЋ: ");
 		printArray(p);
 		printArray(q);
 
-		sortingFractions(p, q); // сортировка дробей в порядке возрастания
+		sortingFractions(p, q); 
 
-		System.out.println("\nСортировка в порядке возрастания дробей: ");
+		System.out.println("\\nРЎРѕСЂС‚РёСЂРѕРІРєР° РІ РїРѕСЂСЏРґРєРµ РІРѕР·СЂР°СЃС‚Р°РЅРёСЏ РґСЂРѕР±РµР№: ");
 		printArray(p);
 		printArray(q);
 
@@ -58,7 +58,7 @@ public class Number_8 {
 		}
 	}
 
-	public static int gcd(int a, int b) { // поиск НОД
+	public static int gcd(int a, int b) { // РїРѕРёСЃРє РќРћР”
 
 		if (b == 0) {
 			return a;
@@ -68,7 +68,7 @@ public class Number_8 {
 		}
 	}
 
-	public static int lcm(int a, int b) { // поиск НОК
+	public static int lcm(int a, int b) { // РїРѕРёСЃРє РќРћРљ
 		return a * (b / gcd(a, b));
 	}
 

@@ -2,7 +2,7 @@ package by.jonline.module2.decomposition;
 
 import java.util.Scanner;
 
-/*Написать метод (методы), определяющий, в каком из данных двух чисел больше цифр.*/
+/*РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ (РјРµС‚РѕРґС‹), РѕРїСЂРµРґРµР»СЏСЋС‰РёР№, РІ РєР°РєРѕРј РёР· РґР°РЅРЅС‹С… РґРІСѓС… С‡РёСЃРµР» Р±РѕР»СЊС€Рµ С†РёС„СЂ.*/
 
 public class Number_11 {
 	public static void main(String[] args) {
@@ -32,26 +32,26 @@ public class Number_11 {
 		}
 		
 		if (countA>countB) {
-			System.out.println("В первом числе цифр больше, чем во втором");
+			System.out.println("Р’ РїРµСЂРІРѕРј С‡РёСЃР»Рµ С†РёС„СЂ Р±РѕР»СЊС€Рµ, С‡РµРј РІРѕ РІС‚РѕСЂРѕРј");
 			
 		} else if (countA<countB) {
-			System.out.println("Во втором числе цифр больше, чем в первом");
+			System.out.println("Р’Рѕ РІС‚РѕСЂРѕРј С‡РёСЃР»Рµ С†РёС„СЂ Р±РѕР»СЊС€Рµ, С‡РµРј РІ РїРµСЂРІРѕРј");
 			
 		} else {
-			System.out.println("В данных числах одинаковое количество цифр");
+			System.out.println("Р’ РґР°РЅРЅС‹С… С‡РёСЃР»Р°С… РѕРґРёРЅР°РєРѕРІРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С†РёС„СЂ");
 			
 		}
 		
 	}
 	
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите целое число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести целое число!");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С†РµР»РѕРµ С‡РёСЃР»Рѕ!");
 		}
 
 		return sc.nextInt();

@@ -2,8 +2,8 @@ package by.jonline.module2.decomposition;
 
 import java.util.Scanner;
 
-/*Даны натуральные числа K и N. Написать метод (методы) формирования массива A, элементами которого являются числа,
-сумма цифр которых равна K и которые не больше N.*/
+/*Р”Р°РЅС‹ РЅР°С‚СѓСЂР°Р»СЊРЅС‹Рµ С‡РёСЃР»Р° K Рё N. РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ (РјРµС‚РѕРґС‹) С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РјР°СЃСЃРёРІР° A, СЌР»РµРјРµРЅС‚Р°РјРё РєРѕС‚РѕСЂРѕРіРѕ СЏРІР»СЏСЋС‚СЃСЏ С‡РёСЃР»Р°,
+СЃСѓРјРјР° С†РёС„СЂ РєРѕС‚РѕСЂС‹С… СЂР°РІРЅР° K Рё РєРѕС‚РѕСЂС‹Рµ РЅРµ Р±РѕР»СЊС€Рµ N.*/
 
 public class Number_12 {
 	public static void main(String[] args) {
@@ -18,10 +18,10 @@ public class Number_12 {
 			printArray(a);
 
 		} else if (n > 10000) {
-			System.out.println("Для удобства представления, N не должно превышать значение 10000");
+			System.out.println("Р”Р»СЏ СѓРґРѕР±СЃС‚РІР° РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ, N РЅРµ РґРѕР»Р¶РЅРѕ РїСЂРµРІС‹С€Р°С‚СЊ Р·РЅР°С‡РµРЅРёРµ 10000");
 
 		} else {
-			System.out.println("Введенные числа должны быть натуральными!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Рµ С‡РёСЃР»Р° РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РЅР°С‚СѓСЂР°Р»СЊРЅС‹РјРё!");
 		}
 
 	}
@@ -35,7 +35,7 @@ public class Number_12 {
 			sourse[i] = i;
 		}
 
-		for (int i = 0; i <= n; i++) { // поиск кол-ва чисел, сумма цифр которых = k
+		for (int i = 0; i <= n; i++) { // РїРѕРёСЃРє РєРѕР»-РІР° С‡РёСЃРµР», СЃСѓРјРјР° С†РёС„СЂ РєРѕС‚РѕСЂС‹С… = k
 
 			if (sumOfDigits(sourse[i]) == k) {
 				count++;
@@ -74,7 +74,7 @@ public class Number_12 {
 	public static void printArray(int[] a) {
 
 		if (a.length == 0) {
-			System.out.println("Нет чисел для отображения");
+			System.out.println("РќРµС‚ С‡РёСЃРµР» РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ");
 		}
 
 		for (int i = 0; i < a.length; i++) {
@@ -86,13 +86,13 @@ public class Number_12 {
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите целое положительное число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести целое положительное число!");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ!");
 		}
 
 		return sc.nextInt();

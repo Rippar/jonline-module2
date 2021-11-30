@@ -2,7 +2,7 @@ package by.jonline.module2.decomposition;
 
 import java.util.Scanner;
 
-/*Написать метод (методы) для нахождения наибольшего общего делителя и наименьшего общего кратного двух натуральных чисел*/
+/*РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ (РјРµС‚РѕРґС‹) РґР»СЏ РЅР°С…РѕР¶РґРµРЅРёСЏ РЅР°РёР±РѕР»СЊС€РµРіРѕ РѕР±С‰РµРіРѕ РґРµР»РёС‚РµР»СЏ Рё РЅР°РёРјРµРЅСЊС€РµРіРѕ РѕР±С‰РµРіРѕ РєСЂР°С‚РЅРѕРіРѕ РґРІСѓС… РЅР°С‚СѓСЂР°Р»СЊРЅС‹С… С‡РёСЃРµР»*/
 
 public class Number_1 {
 	public static void main(String[] args) {
@@ -12,16 +12,16 @@ public class Number_1 {
 
 		if (a > 0 && b > 0) {
 
-			System.out.println("Наибольший общий делитель для данных чисел: " + gcd(a, b));
-			System.out.println("Наименьшее общее кратное для данных чисел: " + lcm(a, b));
+			System.out.println("РќР°РёР±РѕР»СЊС€РёР№ РѕР±С‰РёР№ РґРµР»РёС‚РµР»СЊ РґР»СЏ РґР°РЅРЅС‹С… С‡РёСЃРµР»: " + gcd(a, b));
+			System.out.println("РќР°РёРјРµРЅСЊС€РµРµ РѕР±С‰РµРµ РєСЂР°С‚РЅРѕРµ РґР»СЏ РґР°РЅРЅС‹С… С‡РёСЃРµР»: " + lcm(a, b));
 
 		} else {
-			System.out.println("Введенные числа должны быть положительными!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Рµ С‡РёСЃР»Р° РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹РјРё!");
 		}
 
 	}
 
-	public static int gcd(int a, int b) { // поиск НОД
+	public static int gcd(int a, int b) { // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
 
 		if (b == 0) {
 			return a;
@@ -31,18 +31,18 @@ public class Number_1 {
 		}
 	}
 
-	public static int lcm(int a, int b) { // поиск НОК
+	public static int lcm(int a, int b) { // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
 		return a * (b / gcd(a, b));
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите натуральное число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РЅР°С‚СѓСЂР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести натуральное число!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё РЅР°С‚СѓСЂР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ!: ");
 
 		}
 		return sc.nextInt();

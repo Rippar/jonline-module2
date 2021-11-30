@@ -2,14 +2,14 @@ package by.jonline.module2.onedim_array;
 
 import java.util.Scanner;
 
-/*Даны целые числа a1, a2,..., an. Вывести на печать только те числа, для которых ai>i.*/
+/*Р”Р°РЅС‹ С†РµР»С‹Рµ С‡РёСЃР»Р° a1, a2,..., an. Р’С‹РІРµСЃС‚Рё РЅР° РїРµС‡Р°С‚СЊ С‚РѕР»СЊРєРѕ С‚Рµ С‡РёСЃР»Р°, РґР»СЏ РєРѕС‚РѕСЂС‹С… ai>i.*/
 
 public class Number_5 {
 	public static void main(String[] args) {
 
 		int n = enterFromConsole();
 
-		if (n > 1 && n < 100) { // макс. размер задан для удобства представления
+		if (n > 1 && n < 100) { // РјР°РєСЃ. СЂР°Р·РјРµСЂ Р·Р°РґР°РЅ РґР»СЏ СѓРґРѕР±СЃС‚РІР° РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ
 
 			int[] a = new int[n];
 
@@ -17,7 +17,7 @@ public class Number_5 {
 
 			printArray(a);
 
-			System.out.print("Числа, для которых ai>i: ");
+			System.out.print("Р§РёСЃР»Р°, РґР»СЏ РєРѕС‚РѕСЂС‹С… ai>i: ");
 			for (int i = 0; i < a.length; i++) {
 				if (a[i] > i) {
 
@@ -27,11 +27,11 @@ public class Number_5 {
 
 		} else if (n > 100) {
 
-			System.out.println("Введенный размер массива слишком велик!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° СЃР»РёС€РєРѕРј РІРµР»РёРє!");
 
 		} else {
 
-			System.out.println("Размер массива для данной задачи должен быть больше 1!");
+			System.out.println("Р Р°Р·РјРµСЂ РјР°СЃСЃРёРІР° РґР»СЏ РґР°РЅРЅРѕР№ Р·Р°РґР°С‡Рё РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 1!");
 		}
 	}
 
@@ -43,7 +43,7 @@ public class Number_5 {
 
 	public static void printArray(int[] a) {
 
-		System.out.println("Исходный массив:");
+		System.out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ:");
 
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(a[i] + "; ");
@@ -52,13 +52,13 @@ public class Number_5 {
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите целое положительное число, большее 1: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ, Р±РѕР»СЊС€РµРµ 1: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести целое положительное число, большее 1!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ, Р±РѕР»СЊС€РµРµ 1!: ");
 
 		}
 		return sc.nextInt();

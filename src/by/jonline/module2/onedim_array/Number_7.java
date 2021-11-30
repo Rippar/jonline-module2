@@ -2,14 +2,14 @@ package by.jonline.module2.onedim_array;
 
 import java.util.Scanner;
 
-/*Даны действительные числа a1, a2,..., an. Найти max(a1 + a2, a2 + a3, ..., an + an+1) */
+/*Р”Р°РЅС‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹Рµ С‡РёСЃР»Р° a1, a2,..., an. РќР°Р№С‚Рё max(a1 + a2, a2 + a3, ..., an + an+1) */
 
 public class Number_7 {
 	public static void main(String[] args) {
 
 		int n = enterFromConsole();
 
-		if (n > 1 && n <= 100) { // макс. размер задан для удобства представления
+		if (n > 1 && n <= 100) { // РјР°РєСЃ. СЂР°Р·РјРµСЂ Р·Р°РґР°РЅ РґР»СЏ СѓРґРѕР±СЃС‚РІР° РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ
 			
 			double max = -Double.MAX_VALUE;
 
@@ -25,13 +25,13 @@ public class Number_7 {
 				}
 			}
 
-			System.out.println("Максимальное значение: " + max);
+			System.out.println("РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " + max);
 
 		} else if (n > 100) {
-			System.out.println("Введенный размер массива слишком велик!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° СЃР»РёС€РєРѕРј РІРµР»РёРє!");
 
 		} else {
-			System.out.println("Размер массива для данной задачи должен быть больше 1!");
+			System.out.println("Р Р°Р·РјРµСЂ РјР°СЃСЃРёРІР° РґР»СЏ РґР°РЅРЅРѕР№ Р·Р°РґР°С‡Рё РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 1!");
 
 		}
 
@@ -51,13 +51,13 @@ public class Number_7 {
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите размер массива (от 2 до 100): ");
+		System.out.println("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° (РѕС‚ 2 РґРѕ 100): ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести целое положительное число (от 2 до 100)!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ (РѕС‚ 2 РґРѕ 100)!: ");
 
 		}
 		return sc.nextInt();

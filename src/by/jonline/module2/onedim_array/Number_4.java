@@ -2,14 +2,14 @@ package by.jonline.module2.onedim_array;
 
 import java.util.Scanner;
 
-/*Даны действительные числа a1, a2,..., an. Поменять местами наибольший и наименьший элементы*/
+/*Р”Р°РЅС‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹Рµ С‡РёСЃР»Р° a1, a2,..., an. РџРѕРјРµРЅСЏС‚СЊ РјРµСЃС‚Р°РјРё РЅР°РёР±РѕР»СЊС€РёР№ Рё РЅР°РёРјРµРЅСЊС€РёР№ СЌР»РµРјРµРЅС‚С‹*/
 
 public class Number_4 {
 	public static void main(String[] args) {
 		
 		int n = enterFromConsole();
 			
-		if (n > 1 && n < 100) { // макс. размер задан для удобства представления
+		if (n > 1 && n < 100) { // РјР°РєСЃ. СЂР°Р·РјРµСЂ Р·Р°РґР°РЅ РґР»СЏ СѓРґРѕР±СЃС‚РІР° РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ
 			
 			double max = -Double.MAX_VALUE;
 			double min = Double.MAX_VALUE;
@@ -45,11 +45,11 @@ public class Number_4 {
 			
 		} else if (n > 100) {
 
-			System.out.println("Введенный размер массива слишком велик!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° СЃР»РёС€РєРѕРј РІРµР»РёРє!");
 
 		} else {
 
-			System.out.println("Размер массива для данной задачи должен быть больше 1!");
+			System.out.println("Р Р°Р·РјРµСЂ РјР°СЃСЃРёРІР° РґР»СЏ РґР°РЅРЅРѕР№ Р·Р°РґР°С‡Рё РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 1!");
 		}
 	}
 	
@@ -67,13 +67,13 @@ public class Number_4 {
 	}
 	
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите целое положительное число, которое больше 1: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ, РєРѕС‚РѕСЂРѕРµ Р±РѕР»СЊС€Рµ 1: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести целое положительное число, которое больше 1!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ, РєРѕС‚РѕСЂРѕРµ Р±РѕР»СЊС€Рµ 1!: ");
 
 		}
 		return sc.nextInt();

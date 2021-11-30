@@ -2,7 +2,7 @@ package by.jonline.module2.decomposition;
 
 import java.util.Scanner;
 
-/*Написать метод (методы), проверяющий, являются ли данные три числа взаимно простыми*/
+/*РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ (РјРµС‚РѕРґС‹), РїСЂРѕРІРµСЂСЏСЋС‰РёР№, СЏРІР»СЏСЋС‚СЃСЏ Р»Рё РґР°РЅРЅС‹Рµ С‚СЂРё С‡РёСЃР»Р° РІР·Р°РёРјРЅРѕ РїСЂРѕСЃС‚С‹РјРё*/
 
 public class Number_6 {
 	public static void main(String[] args) {
@@ -16,14 +16,14 @@ public class Number_6 {
 			int result = gcd(gcd(a, b), c);
 
 			if (result == 1) {
-				System.out.println("Введенные числа являются взаимно простыми");
+				System.out.println("Р’РІРµРґРµРЅРЅС‹Рµ С‡РёСЃР»Р° СЏРІР»СЏСЋС‚СЃСЏ РІР·Р°РёРјРЅРѕ РїСЂРѕСЃС‚С‹РјРё");
 
 			} else {
-				System.out.println("Введенные числа не являются взаимно простыми");
+				System.out.println("Р’РІРµРґРµРЅРЅС‹Рµ С‡РёСЃР»Р° РЅРµ СЏРІР»СЏСЋС‚СЃСЏ РІР·Р°РёРјРЅРѕ РїСЂРѕСЃС‚С‹РјРё");
 			}
 
 		} else {
-			System.out.println("Введенные числа должны быть больше 0!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Рµ С‡РёСЃР»Р° РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 0!");
 		}
 
 	}
@@ -40,13 +40,13 @@ public class Number_6 {
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите целое положительное число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести целое положительное число!");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё С†РµР»РѕРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ!");
 		}
 
 		return sc.nextInt();

@@ -2,15 +2,15 @@ package by.jonline.module2.multidim_array;
 
 import java.util.Scanner;
 
-/*Дана матрица. Вывести k-ю строку и p-й столбец матрицы*/
+/*Р”Р°РЅР° РјР°С‚СЂРёС†Р°. Р’С‹РІРµСЃС‚Рё k-СЋ СЃС‚СЂРѕРєСѓ Рё p-Р№ СЃС‚РѕР»Р±РµС† РјР°С‚СЂРёС†С‹*/
 
 public class Number_3 {
 	public static void main(String[] args) {
 
-		int n = enterFromConsole(); // длина матрицы
-		int w = enterFromConsole(); // ширина матрицы
-		int k = enterFromConsole(); // k-я строка
-		int p = enterFromConsole(); // p-й столбец
+		int n = enterFromConsole(); // РґР»РёРЅР° РјР°С‚СЂРёС†С‹
+		int w = enterFromConsole(); // С€РёСЂРёРЅР° РјР°С‚СЂРёС†С‹
+		int k = enterFromConsole(); // k-СЏ СЃС‚СЂРѕРєР°
+		int p = enterFromConsole(); // p-Р№ СЃС‚РѕР»Р±РµС†
 
 		if ((n > 1 && w > 1 && n <= 100 && w <= 100) && (k >= 0 && p >= 0 && k < n && p < w)) { 
 			
@@ -32,14 +32,14 @@ public class Number_3 {
 			}
 
 		} else if (n > 100 || k > 100) {
-			System.out.println("Введенные размеры матрицы слишком велики!");
+			System.out.println("Р’РІРµРґРµРЅРЅС‹Рµ СЂР°Р·РјРµСЂС‹ РјР°С‚СЂРёС†С‹ СЃР»РёС€РєРѕРј РІРµР»РёРєРё!");
 
 		} else if (k >= n || p >= w) {
-			System.out.println("k и p должны предствлять собой существующие строку и столбец данной матрицы!");
+			System.out.println("k Рё p РґРѕР»Р¶РЅС‹ РїСЂРµРґСЃС‚РІР»СЏС‚СЊ СЃРѕР±РѕР№ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёРµ СЃС‚СЂРѕРєСѓ Рё СЃС‚РѕР»Р±РµС† РґР°РЅРЅРѕР№ РјР°С‚СЂРёС†С‹!");
 
 		} else {
 			System.out.println(
-					"Размер матрицы для данной задачи должен быть больше 1 х 1, а k и p должны предствлять собой существующие строку и столбец данной матрицы!");
+					"Р Р°Р·РјРµСЂ РјР°С‚СЂРёС†С‹ РґР»СЏ РґР°РЅРЅРѕР№ Р·Р°РґР°С‡Рё РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ 1 С… 1, Р° k Рё p РґРѕР»Р¶РЅС‹ РїСЂРµРґСЃС‚РІР»СЏС‚СЊ СЃРѕР±РѕР№ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёРµ СЃС‚СЂРѕРєСѓ Рё СЃС‚РѕР»Р±РµС† РґР°РЅРЅРѕР№ РјР°С‚СЂРёС†С‹!");
 
 		}
 
@@ -54,7 +54,7 @@ public class Number_3 {
 	}
 
 	public static void printArray(double[][] a) {
-		System.out.println("Исходная матрица:");
+		System.out.println("РСЃС…РѕРґРЅР°СЏ РјР°С‚СЂРёС†Р°:");
 
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a[i].length; j++) {
@@ -68,13 +68,13 @@ public class Number_3 {
 	}
 
 	public static int enterFromConsole() {
-		@SuppressWarnings("resourse")
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Введите неотрицательное целое число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ С†РµР»РѕРµ С‡РёСЃР»Рѕ: ");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("Нужно ввести неотрицательное целое число!: ");
+			System.out.println("РќСѓР¶РЅРѕ РІРІРµСЃС‚Рё РЅРµРѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ С†РµР»РѕРµ С‡РёСЃР»Рѕ!: ");
 
 		}
 		return sc.nextInt();
