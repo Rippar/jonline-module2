@@ -46,7 +46,7 @@ public class Number_2 {
 	}
 
 	public static void printArray(double[][] a) {
-		System.out.println("�������� �������:");
+		System.out.println("Исходная матрица:");
 
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a[i].length; j++) {
